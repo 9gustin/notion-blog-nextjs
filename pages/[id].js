@@ -6,6 +6,8 @@ import { databaseId } from "./index.js";
 
 import { render, StyledText } from '@9gustin/react-notion-render';
 
+import Header from '../components/Header';
+
 import styles from './index.module.css';
 
 export default function Post({ page, blocks }) {
@@ -13,13 +15,15 @@ export default function Post({ page, blocks }) {
     return <div />;
   }
   return (
-    <div>
+    <>
       <Head>
         <title>{page.properties.Name.title[0].plain_text}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <article className={styles.container}>
+      <div className={styles.container}>
+        <Header />
+        <article>
         <h1>
           {page.properties.Name.title.map(({text, annotations}, index) => (<StyledText key={index} text={text} annotations={annotations} />))}
         </h1>
@@ -30,7 +34,8 @@ export default function Post({ page, blocks }) {
           </Link>
         </section>
       </article>
-    </div>
+      </div>
+    </>
   );
 }
 
