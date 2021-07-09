@@ -12,6 +12,7 @@ body {
   --size: 16px;
   --size-lg: 20px;
   --size-xl: 36px;
+  --font-size-primary: 18px;
 
   &.js-theme {
     --theme-color: #96891b;
@@ -51,19 +52,12 @@ body.dark {
   }
 }
 
-*{
-  font-family: var(--font-family), sans-serif;
-}
 html,
 body {
   padding: 0;
   margin: 0;
   color: var(--text-color);
   background-color: var(--bkg-color);
-}
-
-svg path{
-  fill: var(--text-color);
 }
 
 a, 
@@ -74,10 +68,11 @@ a,
 
 * {
   box-sizing: border-box;
+  font-family: var(--font-family), sans-serif;
 }
 
 h1 {
-  font-weight: 800;
+  font-weight: 500;
 }
 
 

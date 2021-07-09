@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
-import ReactDOMServer from 'react-dom/server'
+import ReactDOMServer from "react-dom/server";
 
 import user from "../../config/user";
 
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 
 interface Props {
   title: React.ReactNode;
@@ -24,13 +24,11 @@ function ArticleWrapper({ title, children }: Props) {
 
       <article>
         <h1>{title}</h1>
-        <section>
-          {children}
-          <Link href="/">
-            <a className={styles["go-back"]}>← Ir al inicio</a>
-          </Link>
-        </section>
+        <section>{children}</section>
       </article>
+      <Link href="/">
+        <a className={styles["go-back"]}>Volver</a>
+      </Link>
     </>
   );
 }

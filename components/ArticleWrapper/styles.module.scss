@@ -1,0 +1,13 @@
+.go-back {
+  color: var(--theme-color);
+  display: block;
+  margin: 20px 0;
+  opacity: 1;
+  padding: 20px 8px;
+  width: fit-content;
+
+  &::before {
+    content: '←';
+    margin-right: 15px;
+  }
+}
