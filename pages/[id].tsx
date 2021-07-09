@@ -1,17 +1,13 @@
-import { useRouter } from "next/router";
 import { renderBlocks, renderTitle } from "@9gustin/react-notion-render";
 
 import { getDatabase, getPage, getBlocks } from "../lib/notion";
-import { PATHS } from "../config/paths";
 import ArticleWrapper from "../components/ArticleWrapper";
 
 import { databaseId } from ".";
 
 export default function Post({ page, blocks }) {
-  const router = useRouter();
-
   if (!page || !blocks) {
-    router.push(PATHS.home);
+    return <div />;
   }
 
   return (
