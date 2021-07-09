@@ -1,8 +1,8 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { THEMES, THEME_KEY, THEMES_LABELS } from './constants';
 import isNavigatorDarkTheme from '../../utils/isNavigatorDarkTheme';
 
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 function ThemeToggler() {
   const [selectedTheme, setTheme] = useState();
@@ -11,7 +11,7 @@ function ThemeToggler() {
 
   const actualTheme = () => localStorage.getItem(THEME_KEY);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setTheme(actualTheme() || (isNavigatorDarkTheme() ? THEMES.DARK : THEMES.LIGHT));
   }, [])
 

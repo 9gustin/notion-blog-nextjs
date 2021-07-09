@@ -7,7 +7,13 @@
 }
 
 .header p {
+  font-size: var(--size-lg);
   line-height: 1.5;
-  opacity: 0.7;
+  opacity: 0.8;
   width: 100%;
+}
+
+.title:any-link {
+  color: var(--theme-color);
+  font-size: var(--size-xl);
 }
