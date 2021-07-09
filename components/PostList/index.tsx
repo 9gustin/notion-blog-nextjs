@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { dateToString } from "../../utils/dateToString";
 
-import styles from './styles.module.css';
+import styles from "./styles.module.scss";
 
 interface Props {
   posts: {
@@ -18,19 +18,19 @@ function PostList({ posts }: Props) {
   return (
     <ul className={styles.posts}>
       {posts.map((post) => (
-        <li key={post.id} className={styles.post}>
-          <h3 className={styles.postTitle}>
-            <Link href={`/${post.id}`}>
-              {renderTitle(post.properties.Name)}
-            </Link>
-          </h3>
-
-          <p className={styles.postDescription}>
-            {dateToString(post.last_edited_time)}
-          </p>
-
+        <li key={post.id}>
           <Link href={`/${post.id}`}>
-            <a> Leer →</a>
+            <a className={styles.post}>
+              <h3 className={styles.title}>
+                <Link href={`/${post.id}`}>
+                  {renderTitle(post.properties.Name)}
+                </Link>
+              </h3>
+
+              <p className={styles.subtitle}>
+                {dateToString(post.last_edited_time)}
+              </p>
+            </a>
           </Link>
         </li>
       ))}

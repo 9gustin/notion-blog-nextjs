@@ -1,0 +1,48 @@
+.posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px 0;
+  opacity: 0.85;
+  transition: all 0.4s;
+  color: var(--text-color);
+
+
+  .title {
+    font-size: var(--size-lg);
+    line-height: var(--size-lg);
+    font-weight: 300;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 80%;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+    margin: 10px 25px;
+    opacity: 0.6;
+    width: 100%;
+  }
+
+  &::before {
+    background-color: var(--theme-color);
+    border-radius: 2px;
+    content: "";
+    height: 10px;
+    margin: auto 10px;
+    width: 10px;
+  }
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}

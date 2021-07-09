@@ -1,0 +1,30 @@
+.container {
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.plus {
+  font-size: 20px;
+  margin: 0 20px;
+}
+
+.heading {
+  align-items: center;
+  display: flex;
+  font-weight: 400;
+  margin-left: 10px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-size: var(--size);
+  opacity: 0.6;
+
+  &::after {
+    background-color: var(--theme-color);
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 0 15px;
+    width: 100%;
+  }
+}
