@@ -1,41 +1,23 @@
-import { Fragment } from "react";
-import Head from "next/head";
+import { useRouter } from "next/router";
+import { render } from "@9gustin/react-notion-render";
+
 import { getDatabase, getPage, getBlocks } from "../lib/notion";
-import Link from "next/link";
+import { PATHS } from "../config/paths";
+import ArticleWrapper from "../components/ArticleWrapper";
+
 import { databaseId } from "./index.js";
 
-import { render, StyledText } from '@9gustin/react-notion-render';
-
-import Header from '../components/Header';
-
-import styles from './index.module.css';
-
 export default function Post({ page, blocks }) {
-  if (!page || !blocks) {
-    return <div />;
-  }
-  return (
-    <>
-      <Head>
-        <title>{page.properties.Name.title[0].plain_text}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+  const router = useRouter();
 
-      <div className={styles.container}>
-        <Header />
-        <article>
-        <h1>
-          {page.properties.Name.title.map(({text, annotations}, index) => (<StyledText key={index} text={text} annotations={annotations} />))}
-        </h1>
-        <section>
-          {render(blocks)}
-          <Link href="/">
-            <a className={styles.back}>← Go home</a>
-          </Link>
-        </section>
-      </article>
-      </div>
-    </>
+  if (!page || !blocks) {
+    router.push(PATHS.home);
+  }
+
+  return (
+    <ArticleWrapper name={page.properties.Name}>
+      {render(blocks)}
+    </ArticleWrapper>
   );
 }
 

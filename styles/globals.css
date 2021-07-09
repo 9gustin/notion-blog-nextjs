@@ -2,11 +2,27 @@ body {
   --text-color: #222;
   --bkg-color: #EEE;
   --anchor-color: #0033cc;
+  --theme-color: red;
 }
 body.dark {
   --text-color: #D9D9D9;
-  --bkg-color: #31313c;
+  --bkg-color: #282c34;
   --anchor-color: #809fff;
+}
+body.react-theme {
+  --theme-color: #61dafb;
+}
+body.js-theme {
+  --theme-color: #f7e018;
+}
+body.angular-theme {
+  --theme-color: #dd0031;
+}
+body.vue-theme {
+  --theme-color: #42b983;
+}
+body.svelte-theme {
+  --theme-color: #ff3e00;
 }
 
 html,
