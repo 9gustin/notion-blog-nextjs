@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { THEMES, THEME_KEY, THEMES_LABELS } from './constants';
 import isNavigatorDarkTheme from '../../utils/isNavigatorDarkTheme';
 
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 function ThemeToggler() {
   const [selectedTheme, setTheme] = useState();

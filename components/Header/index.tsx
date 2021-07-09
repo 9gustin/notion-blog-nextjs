@@ -15,14 +15,14 @@ interface Props {
 
 function Header({ className, title, description }: Props) {
   return (
-    <header className={`${styles.header} ${className || ''}`}>
+    <header className={`${styles.header} ${className || ""}`}>
       <h1>
-        <Link href={PATHS.home}>{title}</Link>
+        <Link href={PATHS.home}>
+          <a className={styles.title}>{title}</a>
+        </Link>
       </h1>
       <ThemeToggler />
-      <p>
-        {description}
-      </p>
+      {description && <p>{description}</p>}
     </header>
   );
 }

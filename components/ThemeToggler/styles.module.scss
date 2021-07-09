@@ -1,0 +1,30 @@
+@import '../../styles/variables';
+
+.button {
+  background: transparent;
+  border-radius: 10px;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  cursor: pointer;
+  opacity: 0.85;
+  padding: 8px 14px;
+  transition: .7s;
+  font-size: var(--size);
+  font-weight: 500;
+  width: 140px;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  opacity: 1;
+  background: var(--text-color);
+  color: var(--bkg-color); 
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .button {
+    padding: 8px;
+    width: 115px;
+  }
+}

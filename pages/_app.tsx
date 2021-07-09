@@ -1,7 +1,7 @@
 import "@9gustin/react-notion-render/dist/index.css";
 import React from "react";
 import LayoutWrapper from "../components/LayoutWrapper";
-import "../styles/globals.css";
+import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
