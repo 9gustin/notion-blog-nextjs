@@ -1,42 +1,38 @@
-import React from 'react';
+import React from "react";
 import Link from "next/link";
-import Head from 'next/head';
-import { StyledText } from '@9gustin/react-notion-render';
+import Head from "next/head";
+import ReactDOMServer from 'react-dom/server'
 
 import user from "../../config/user";
 
 import styles from "./styles.module.css";
 
 interface Props {
-  name: any;
-  children: React.ReactNode
+  title: React.ReactNode;
+  children: React.ReactNode;
 }
 
-function ArticleWrapper({name, children}: Props) {
+function ArticleWrapper({ title, children }: Props) {
   return (
     <>
       <Head>
         <title>
-          {name.title[0].plain_text}
+          {ReactDOMServer.renderToString(title)}
           {user.pageTitle}
         </title>
       </Head>
 
       <article>
-        <h1>
-          {name.title.map((props, index) => (
-            <StyledText key={index} {...props} />
-          ))}
-        </h1>
+        <h1>{title}</h1>
         <section>
           {children}
           <Link href="/">
-            <a className={styles['go-back']}>← Go home</a>
+            <a className={styles["go-back"]}>← Ir al inicio</a>
           </Link>
         </section>
       </article>
     </>
-  )
+  );
 }
 
 export default ArticleWrapper;

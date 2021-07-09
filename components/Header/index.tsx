@@ -20,7 +20,9 @@ function Header({ className, title, description }: Props) {
         <Link href={PATHS.home}>{title}</Link>
       </h1>
       <ThemeToggler />
-      {description}
+      <p>
+        {description}
+      </p>
     </header>
   );
 }
