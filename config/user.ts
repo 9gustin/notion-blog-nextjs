@@ -9,12 +9,12 @@ interface User {
 }
 
 const user: User = {
-  title: "9gu ⚡",
+  title: "Jhon Doe",
   description: 
-    "Mi nombre empieza con 9 porque del 1 al 8 estaban ocupados. Soy Frontend Dev y cree este blog para escribir sobre cosas que me parezcan interesantes.",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores quaerat at dolor ducimus nostrum facere id modi molestias reiciendis",
   theme: null,
   mainTitle: "Blog",
-  pageTitle: " | 9gustin"
+  pageTitle: " | Jhon Doe"
 }
 
 export default user;
