@@ -41,3 +41,12 @@ Check this part of Notion API documentation, you have to share database with you
 For last, create a .env file like this [example](https://github.com/9gustin/notion-blog-nextjs/blob/main/.env.example) and add your database id and your integration token. And now you can run the project like any Next project, npm run dev(with previous npm install).
 The same to deploy, take in count the env variables.
 
+## Customization
+Once you have the repo running feel free to change or add anything you want, themes, components.
+
+## Known issues
+ * Typescript: I add typescript but not in all files, i would change this progressively.
+ * Language: I will work in support of more than one languages
+ * SEO: I not apply anything about it
+
+I will work on that soon, but if you want feel free to make a PR with a functionality of these or something that occurs to you
