@@ -75,6 +75,10 @@ h1 {
   font-weight: 500;
 }
 
+p, span, a {
+  word-break: break-word;
+}
+
 
 @media (max-width: $mobile-breakpoint) {
   body {
