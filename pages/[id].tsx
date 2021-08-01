@@ -1,4 +1,4 @@
-import { renderBlocks, renderTitle } from "@9gustin/react-notion-render";
+import { Render } from "@9gustin/react-notion-render";
 
 import { getDatabase, getPage, getBlocks } from "../lib/notion";
 import ArticleWrapper from "../components/ArticleWrapper";
@@ -11,8 +11,8 @@ export default function Post({ page, blocks }) {
   }
 
   return (
-    <ArticleWrapper title={renderTitle(page.properties.Name)}>
-      {renderBlocks(blocks)}
+    <ArticleWrapper title={<Render blocks={[page.properties.Name]} />}>
+      <Render blocks={blocks} useStyles />
     </ArticleWrapper>
   );
 }
