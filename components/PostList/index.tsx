@@ -1,5 +1,4 @@
-import { renderTitle } from "@9gustin/react-notion-render";
-import Title from "@9gustin/react-notion-render/dist/types/Title";
+import { Render, NotionBlock } from "@9gustin/react-notion-render";
 import Link from "next/link";
 import React from "react";
 import { dateToString } from "../../utils/dateToString";
@@ -10,7 +9,7 @@ interface Props {
   posts: {
     id: string;
     last_edited_time: string;
-    properties: { Name: Title };
+    properties: { Name: NotionBlock };
   }[];
 }
 
@@ -23,7 +22,7 @@ function PostList({ posts }: Props) {
             <a className={styles.post}>
               <h3 className={styles.title}>
                 <Link href={`/${post.id}`}>
-                  {renderTitle(post.properties.Name)}
+                  <Render blocks={[post.properties.Name]} />
                 </Link>
               </h3>
 
