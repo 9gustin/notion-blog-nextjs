@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@9gustin/react-notion-render@^3.3.0-beta.3":
-  "integrity" "sha512-HhB0tyawmK8sfpdf+DYrTvmSJXOrRj5A83R4v5tEeVZFXtghRH3qbhs+tds0KgK4Zeq25xOCd6SO9NcAya+Bbw=="
-  "resolved" "https://registry.npmjs.org/@9gustin/react-notion-render/-/react-notion-render-3.3.0-beta.3.tgz"
-  "version" "3.3.0-beta.3"
+"@9gustin/react-notion-render@^3.3.0":
+  "integrity" "sha512-sP6arvWAomTmvKrvFW/UpGAsHgmTODazo8Fu9lMB//zEgrTRd/1KIbULW4Zn4oePxybYQBp5fB4cN3fTrmNMUg=="
+  "resolved" "https://registry.npmjs.org/@9gustin/react-notion-render/-/react-notion-render-3.3.0.tgz"
+  "version" "3.3.0"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@7.12.11":
   "integrity" "sha512-Zt1yodBx1UcyiePMSkWnU4hPqhwq7hGi2nFL1LeA3EUl+q2LQx16MISgJ0+z7dnmgvP9QtIleuETGOiOH1RcIw=="
