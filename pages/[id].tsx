@@ -12,7 +12,7 @@ export default function Post({ page, blocks }) {
 
   return (
     <ArticleWrapper title={<Render blocks={[page.properties.Name]} />}>
-      <Render blocks={blocks} useStyles />
+      <Render blocks={blocks} useStyles classNames/>
     </ArticleWrapper>
   );
 }
