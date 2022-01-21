@@ -1,4 +1,6 @@
+import React from 'react';
 import { Render } from "@9gustin/react-notion-render";
+import prism from "../assets/prism";
 
 import { getDatabase, getPage, getBlocks } from "../lib/notion";
 import ArticleWrapper from "../components/ArticleWrapper";
@@ -9,6 +11,10 @@ export default function Post({ page, blocks }) {
   if (!page || !blocks) {
     return <div />;
   }
+
+  React.useEffect(() => {
+    prism.highlightAll();
+  }, [])
 
   return (
     <ArticleWrapper title={<Render blocks={[page.properties.Name]} />}>
