@@ -1,11 +1,16 @@
 import React from 'react';
-import { Render } from "@9gustin/react-notion-render";
+import Image from 'next/image'
+import { Render, withContentValidation } from "@9gustin/react-notion-render";
 import prism from "../assets/prism";
 
 import { getDatabase, getPage, getBlocks } from "../lib/notion";
 import ArticleWrapper from "../components/ArticleWrapper";
 
 import { databaseId } from ".";
+
+const myMapper = {
+  image: withContentValidation(({ media }) => <Image src={media.src} width="300" height="300" />),
+}
 
 export default function Post({ page, blocks }) {
   if (!page || !blocks) {
@@ -18,7 +23,12 @@ export default function Post({ page, blocks }) {
 
   return (
     <ArticleWrapper title={<Render blocks={[page.properties.Name]} />}>
-      <Render blocks={blocks} useStyles classNames/>
+      <Render
+        blocks={blocks}
+        blockComponentsMapper={myMapper as any}
+        useStyles
+        classNames
+      />
     </ArticleWrapper>
   );
 }
