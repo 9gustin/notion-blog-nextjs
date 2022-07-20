@@ -12,10 +12,10 @@
     "@notionhq/client": "^0.1.8",
     "@types/node": "^16.3.0",
     "@types/react": "^17.0.14",
-    "next": "10.2.3",
+    "next": "^12.2.2",
     "prismjs": "^1.26.0",
-    "react": "17.x",
-    "react-dom": "17.x",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "^1.35.2",
     "typescript": "^4.3.5"
   },
